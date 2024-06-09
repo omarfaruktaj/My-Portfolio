@@ -1,3 +1,11 @@
+import Hero from "@/components/ui/home/hero";
+import Skills from "@/components/ui/home/skills";
+
 export default function Home() {
-  return <div>Welcome to my portfolio.</div>;
+  return (
+    <main className="container mx-auto p-4">
+      <Hero />
+      <Skills />
+    </main>
+  );
 }
