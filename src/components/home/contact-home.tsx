@@ -3,7 +3,7 @@ import React from "react";
 
 export default function ContactHome() {
   return (
-    <section className="contact text-center py-10 bg-gradient-to-r from-blue-500 to-green-400 text-white">
+    <section className="contact text-center py-10 ">
       <h2 className="text-3xl font-bold">Get in Touch</h2>
       <p className="mt-4 text-lg">
         Interested in working together or want to discuss an idea? Feel free to

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="hero text-center py-2">
+    <section className="hero text-center py-2 mb-10">
       <Image
         src="/omarfaruk.jpg"
         height="600"
