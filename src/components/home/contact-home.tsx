@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { Button } from "../ui/button";
 
 export default function ContactHome() {
   return (
@@ -9,12 +10,9 @@ export default function ContactHome() {
         Interested in working together or want to discuss an idea? Feel free to
         reach out!
       </p>
-      <Link
-        href="/contact"
-        className="text-white bg-blue-500 hover:bg-blue-600 mt-4 px-6 py-2 rounded-full inline-block"
-      >
-        Contact Me
-      </Link>
+      <Button variant={"default"} className="mt-4">
+        <Link href="/contact">Read more</Link>
+      </Button>
     </section>
   );
 }

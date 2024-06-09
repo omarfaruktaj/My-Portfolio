@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "../ui/button";
 
 export default function Projects() {
-  const Projects = [
+  const projects = [
     {
       id: 1,
       title: "Parts Master",
@@ -25,7 +26,7 @@ export default function Projects() {
     <section className="projects py-10 mt-5">
       <h2 className="text-3xl font-bold text-center">Featured Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-        {Projects.map(({ id, title, description, image, github, live }) => (
+        {projects.map(({ id, title, description, image, github, live }) => (
           <div
             key={title}
             className="project bg-white shadow-lg rounded-lg overflow-hidden"
@@ -40,12 +41,22 @@ export default function Projects() {
             <div className="p-6">
               <h3 className="text-2xl font-bold">{title}</h3>
               <p className="mt-2 text-gray-700">{description}</p>
-              <Link
-                href={`/projects/${id}`}
-                className="text-blue-500 cursor-pointer hover:underline mt-4 inline-block"
-              >
-                Read more
-              </Link>
+              <div className="mt-4 flex gap-4 ">
+                {github && (
+                  <Button>
+                    <a href={github} target="_blank" rel="noopener noreferrer">
+                      View on GitHub
+                    </a>
+                  </Button>
+                )}
+                {live && (
+                  <Button variant={"outline"}>
+                    <a href={live} target="_blank" rel="noopener noreferrer">
+                      Live Demo
+                    </a>
+                  </Button>
+                )}
+              </div>
             </div>
           </div>
         ))}

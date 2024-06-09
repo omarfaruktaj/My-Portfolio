@@ -22,6 +22,9 @@ export default function Navbar() {
           <Link href="/">Omar faruk</Link>
         </div>
         <div className="flex items-center space-x-6">
+          <Link href="/" className="text-white hover:text-gray-300">
+            Home
+          </Link>
           <Link href="/about" className="text-white hover:text-gray-300">
             About
           </Link>

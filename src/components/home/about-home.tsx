@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { Button } from "../ui/button";
 
 export default function AboutHome() {
   return (
@@ -10,12 +11,9 @@ export default function AboutHome() {
         innovative and efficient web applications. Currently enhancing my skills
         in full-stack development.
       </p>
-      <Link
-        href="/about"
-        className="text-blue-500 hover:underline mt-4 inline-block"
-      >
-        Read more
-      </Link>
+      <Button variant={"outline"} className="mt-4">
+        <Link href="/about">Read more</Link>
+      </Button>
     </section>
   );
 }

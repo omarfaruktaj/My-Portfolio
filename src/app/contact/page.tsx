@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import { useState, ChangeEvent, FormEvent } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -117,13 +118,14 @@ export default function Contact() {
                   required
                 ></textarea>
               </div>
-              <button
+              <Button
+                variant={"default"}
                 className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105"
                 type="submit"
                 disabled={loading}
               >
                 {loading ? "Sending..." : "Send Message"}
-              </button>
+              </Button>
               {success && (
                 <p className="mt-4 text-green-500">
                   Message sent successfully!
